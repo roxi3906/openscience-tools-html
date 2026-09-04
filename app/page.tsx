@@ -351,9 +351,9 @@ export default function Home() {
       <div className="scroll-progress" aria-hidden="true" />
       <header className="site-header">
         <a className="brand" href="#top" aria-label="AIPOCH Open Science home">
-          <img src="/assets/aipoch-mark.png" alt="AIPOCH" />
-          <span className="brand-divider" />
-          <span>OPEN SCIENCE</span>
+          <span className="brand-symbol" aria-hidden="true"><i /></span>
+          <span className="brand-main">Open Science</span>
+          <span className="brand-by">by AIPOCH</span>
         </a>
 
         <nav className={menuOpen ? "nav-links is-open" : "nav-links"} aria-label="Primary navigation">
@@ -623,7 +623,7 @@ export default function Home() {
       </section>
 
       <footer>
-        <div className="brand footer-brand"><img src="/assets/aipoch-mark.png" alt="AIPOCH" /><span className="brand-divider"/><span>OPEN SCIENCE</span></div>
+        <div className="brand footer-brand" aria-label="Open Science by AIPOCH"><span className="brand-symbol" aria-hidden="true"><i /></span><span className="brand-main">Open Science</span><span className="brand-by">by AIPOCH</span></div>
         <div className="footer-copy"><p>{c.footer}</p><p>{c.trademark}</p></div>
         <div><span>© 2026 AIPOCH</span><a href="#top">BACK TO TOP ↑</a></div>
       </footer>
