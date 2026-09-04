@@ -91,6 +91,11 @@ img {
   gap: 10px;
 }
 
+.brand-home {
+  display: inline-flex;
+  flex: none;
+}
+
 .brand-logo {
   width: auto;
   height: 29px;
@@ -99,6 +104,7 @@ img {
 }
 
 .brand-by {
+  position: relative;
   color: #77766f;
   font-family: var(--font-geist-mono), monospace;
   font-size: 7.5px;
@@ -106,6 +112,23 @@ img {
   letter-spacing: 0.09em;
   line-height: 1;
   text-transform: uppercase;
+}
+
+.brand-by::after {
+  position: absolute;
+  right: 0;
+  bottom: -4px;
+  left: 0;
+  height: 1px;
+  background: currentColor;
+  content: "";
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 160ms ease;
+}
+
+.brand-by:hover::after {
+  transform: scaleX(1);
 }
 
 .nav-links {

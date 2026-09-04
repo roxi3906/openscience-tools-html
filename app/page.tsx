@@ -350,10 +350,12 @@ export default function Home() {
     <main className={lang === "zh" ? "lang-zh" : ""}>
       <div className="scroll-progress" aria-hidden="true" />
       <header className="site-header">
-        <a className="brand" href="#top" aria-label="AIPOCH Open Science home">
-          <img className="brand-logo" src="/open-science-logo.png" alt="" aria-hidden="true" />
-          <span className="brand-by">by AIPOCH</span>
-        </a>
+        <div className="brand">
+          <a className="brand-home" href="#top" aria-label="Open Science home">
+            <img className="brand-logo" src="/open-science-logo.png" alt="" aria-hidden="true" />
+          </a>
+          <a className="brand-by" href="https://aipoch.com/" target="_blank" rel="noreferrer" aria-label="Visit the AIPOCH website">by AIPOCH</a>
+        </div>
 
         <nav className={menuOpen ? "nav-links is-open" : "nav-links"} aria-label="Primary navigation">
           {c.nav.map((item, index) => (
@@ -626,7 +628,7 @@ export default function Home() {
       </section>
 
       <footer>
-        <div className="brand footer-brand" aria-label="Open Science by AIPOCH"><img className="brand-logo" src="/open-science-logo.png" alt="" aria-hidden="true" /><span className="brand-by">by AIPOCH</span></div>
+        <div className="brand footer-brand"><a className="brand-home" href="#top" aria-label="Open Science home"><img className="brand-logo" src="/open-science-logo.png" alt="" aria-hidden="true" /></a><a className="brand-by" href="https://aipoch.com/" target="_blank" rel="noreferrer" aria-label="Visit the AIPOCH website">by AIPOCH</a></div>
         <div className="footer-copy"><p>{c.footer}</p><p>{c.trademark}</p></div>
         <div><span>© 2026 AIPOCH</span><a href="#top">BACK TO TOP ↑</a></div>
       </footer>
