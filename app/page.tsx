@@ -615,7 +615,11 @@ export default function Home() {
         <h2>{c.closeTitle}</h2>
         <p className="closing-body">{c.closeBody}</p>
         <div className="closing-actions">
-          <a href="#why"><span>01</span>{c.guide}<i>↓</i></a>
+          <a
+            href={lang === "zh" ? "https://aipoch.com/docs/zh-Hans/intro/" : "https://aipoch.com/docs/intro/"}
+            target="_blank"
+            rel="noreferrer"
+          ><span>01</span>{c.guide}<i>↗</i></a>
           <a href="https://aipoch.com/open-science" target="_blank" rel="noreferrer"><span>02</span>{c.overview}<i>↗</i></a>
           <a href="https://github.com/aipoch/open-science" target="_blank" rel="noreferrer"><span>03</span>{c.docs}<i>↗</i></a>
         </div>
