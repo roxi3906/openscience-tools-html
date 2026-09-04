@@ -238,7 +238,7 @@ export default function OpenScienceV2() {
             <button className={lang === "en" ? "active" : ""} onClick={() => setLang("en")} aria-pressed={lang === "en"}>EN</button>
             <button className={lang === "zh" ? "active" : ""} onClick={() => setLang("zh")} aria-pressed={lang === "zh"}>中文</button>
           </div>
-          <a className="v2-download" href="https://github.com/aipoch/open-science/releases/latest" target="_blank" rel="noreferrer">{c.download}<span>↗</span></a>
+          <a className="v2-download" href="https://aipoch.com/open-science/download">{c.download}<span>↗</span></a>
           <button className="v2-menu" onClick={() => setMenuOpen((open) => !open)} aria-expanded={menuOpen} aria-label="Toggle navigation"><span /><span /></button>
         </div>
       </header>
@@ -249,7 +249,7 @@ export default function OpenScienceV2() {
           <h1><span>{c.title[0]}</span><span>{c.title[1]}</span></h1>
           <p className="v2-lede">{c.lede}</p>
           <div className="v2-actions">
-            <a className="v2-button primary" href="https://github.com/aipoch/open-science/releases/latest" target="_blank" rel="noreferrer">{c.primary}<span>↗</span></a>
+            <a className="v2-button primary" href="https://aipoch.com/open-science/download">{c.primary}<span>↗</span></a>
             <a className="v2-button secondary" href="https://github.com/aipoch/open-science" target="_blank" rel="noreferrer">⌘ &nbsp; {c.secondary}<span>↗</span></a>
           </div>
           <div className="v2-proof-row">
@@ -332,7 +332,7 @@ export default function OpenScienceV2() {
           <p className="v2-kicker">{c.compareKicker}</p>
           <div><h2>{c.compareTitle}</h2><p>{c.compareBody}</p></div>
         </div>
-        <div className="v2-table-wrap" tabIndex={0} aria-label="Horizontal product comparison table">
+        <div className="v2-table-wrap" role="region" aria-label="Horizontal product comparison table">
           <table>
             <thead>
               <tr>
@@ -405,7 +405,7 @@ export default function OpenScienceV2() {
           <h2>{c.closeTitle}</h2>
           <p>{c.closeBody}</p>
           <div className="v2-close-actions">
-            <a className="v2-button primary" href="https://github.com/aipoch/open-science/releases/latest" target="_blank" rel="noreferrer">{c.primary}<span>↗</span></a>
+            <a className="v2-button primary" href="https://aipoch.com/open-science/download">{c.primary}<span>↗</span></a>
             <a className="v2-text-link" href="https://aipoch.com/open-science/overview?lang=en" target="_blank" rel="noreferrer">{c.docs} ↗</a>
           </div>
         </div>

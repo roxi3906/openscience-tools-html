@@ -14,6 +14,7 @@ const copy = {
     intro:
       "An open-source, model-agnostic workbench for real research. Bring the question, the evidence and the expertise into one continuous, inspectable workspace.",
     explore: "Explore the workbench",
+    download: "Download Open Science",
     github: "Build with us on GitHub",
     signal: "OPEN BY DESIGN · BUILT WITH THE RESEARCH COMMUNITY",
     whyKicker: "01 / THE RESEARCH GAP",
@@ -155,6 +156,7 @@ const copy = {
     intro:
       "面向真实科研的开源、模型自由工作台。让问题、证据与专业知识进入同一个连续、透明、可检查的研究空间。",
     explore: "探索科研工作台",
+    download: "下载 Open Science",
     github: "在 GitHub 与我们共建",
     signal: "以开放为原则 · 与全球科研社区共同构建",
     whyKicker: "01 / 科研断层",
@@ -356,7 +358,7 @@ export default function Home() {
           <p className="hero-intro">{c.intro}</p>
           <div className="hero-actions">
             <a className="button primary" href="#workbench">{c.explore} <span aria-hidden="true">↓</span></a>
-            <a className="text-link" href="https://github.com/aipoch/open-science" target="_blank" rel="noreferrer">{c.github} <span aria-hidden="true">↗</span></a>
+            <a className="text-link" href="https://aipoch.com/open-science/download">{c.download} <span aria-hidden="true">↗</span></a>
           </div>
         </div>
         <div className="hero-art reveal-in" aria-hidden="true">

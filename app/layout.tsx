@@ -41,7 +41,24 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>{children}</body>
+      <body className={`${geistSans.variable} ${geistMono.variable}`}>
+        {children}
+        <script
+          id="aipoch-google-analytics"
+          dangerouslySetInnerHTML={{
+            __html: `if (location.hostname === 'aipoch.com' || location.hostname === 'www.aipoch.com') {
+  window.dataLayer = window.dataLayer || [];
+  window.gtag = function(){window.dataLayer.push(arguments);};
+  window.gtag('js', new Date());
+  window.gtag('config', 'G-HFPR0TYS9X');
+  var ga = document.createElement('script');
+  ga.async = true;
+  ga.src = 'https://www.googletagmanager.com/gtag/js?id=G-HFPR0TYS9X';
+  document.head.appendChild(ga);
+}`,
+          }}
+        />
+      </body>
     </html>
   );
 }
