@@ -3,9 +3,9 @@ import type { MetadataRoute } from "next";
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {
-      url: "https://aipoch.com/open-science/download",
+      url: "https://openscience.tools/",
       lastModified: new Date(),
-      changeFrequency: "hourly",
+      changeFrequency: "weekly",
       priority: 1,
     },
   ];

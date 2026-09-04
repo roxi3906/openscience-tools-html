@@ -212,7 +212,7 @@ img {
 .hero-copy {
   position: relative;
   z-index: 3;
-  width: min(690px, 53vw);
+  width: min(980px, 70vw);
 }
 
 .eyebrow,
@@ -240,14 +240,16 @@ img {
 
 .hero h1 {
   margin: 34px 0 0;
-  font-size: clamp(68px, 8.2vw, 132px);
+  font-size: clamp(54px, 5.7vw, 94px);
   font-weight: 430;
   letter-spacing: -0.068em;
-  line-height: 0.88;
+  line-height: 0.94;
 }
 
 .hero h1 span {
-  display: inline-block;
+  display: block;
+  width: fit-content;
+  max-width: 100%;
 }
 
 .hero h1 .highlight-line {
@@ -268,9 +270,16 @@ img {
   content: "";
 }
 
+.hero-tagline {
+  margin: 28px 0 0;
+  font-size: clamp(19px, 1.7vw, 26px);
+  font-weight: 520;
+  letter-spacing: -0.025em;
+}
+
 .hero-intro {
   max-width: 585px;
-  margin: 42px 0 0;
+  margin: 16px 0 0;
   color: #53534e;
   font-size: clamp(17px, 1.4vw, 21px);
   line-height: 1.65;
@@ -1078,6 +1087,14 @@ img {
   font-style: normal;
 }
 
+.medicine-note {
+  max-width: 610px;
+  margin: 24px 0 0;
+  color: #92918a;
+  font-size: 12px;
+  line-height: 1.65;
+}
+
 .skills-copy .button {
   margin-top: 38px;
 }
@@ -1311,6 +1328,74 @@ img {
   font-style: normal;
 }
 
+.faq-section {
+  display: grid;
+  grid-template-columns: minmax(280px, 0.78fr) minmax(0, 1.22fr);
+  gap: 8vw;
+  background: #fff;
+}
+
+.faq-heading h2 {
+  max-width: 720px;
+  margin-top: 28px;
+  font-size: clamp(42px, 4.8vw, 72px);
+}
+
+.faq-list {
+  border-top: 1px solid var(--ink);
+}
+
+.faq-list details {
+  border-bottom: 1px solid var(--line);
+}
+
+.faq-list summary {
+  display: grid;
+  min-height: 112px;
+  grid-template-columns: 38px 1fr 28px;
+  gap: 18px;
+  align-items: center;
+  cursor: pointer;
+  list-style: none;
+}
+
+.faq-list summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-list summary > span {
+  color: #898881;
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 9px;
+}
+
+.faq-list summary strong {
+  font-size: clamp(18px, 1.7vw, 24px);
+  font-weight: 510;
+  letter-spacing: -0.025em;
+}
+
+.faq-list summary i {
+  color: var(--yellow-deep);
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 300;
+  transition: transform 180ms ease;
+}
+
+.faq-list details[open] summary i {
+  transform: rotate(45deg);
+}
+
+.faq-list details > p {
+  max-width: 720px;
+  margin: -8px 46px 0 56px;
+  padding: 0 0 34px;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.75;
+}
+
 .closing-section {
   position: relative;
   min-height: 860px;
@@ -1353,9 +1438,11 @@ img {
 }
 
 .closing-section h2 {
+  max-width: 1180px;
   margin-top: 52px;
-  font-size: clamp(72px, 10.6vw, 164px);
-  line-height: 0.83;
+  font-size: clamp(72px, 9vw, 138px);
+  line-height: 0.88;
+  text-transform: none;
 }
 
 .closing-section h2 span {
@@ -1422,7 +1509,7 @@ img {
 
 footer {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 240px minmax(0, 1fr) auto;
   align-items: center;
   gap: 30px;
   padding: 42px 5vw;
@@ -1435,10 +1522,19 @@ footer {
   filter: invert(1);
 }
 
-footer > p {
+.footer-copy {
+  max-width: 900px;
+}
+
+.footer-copy p {
   margin: 0;
-  text-align: center;
-  font-size: 11px;
+  font-size: 10px;
+  line-height: 1.55;
+}
+
+.footer-copy p + p {
+  margin-top: 7px;
+  color: #6f6f69;
 }
 
 footer > div:last-child {
@@ -1475,7 +1571,7 @@ footer a:hover {
   }
 
   .hero-copy {
-    width: 61vw;
+    width: 70vw;
   }
 
   .hero-art {
@@ -1613,12 +1709,17 @@ footer a:hover {
 
   .hero h1 {
     margin-top: 27px;
-    font-size: clamp(54px, 17.5vw, 80px);
-    line-height: 0.9;
+    font-size: clamp(46px, 13.2vw, 66px);
+    line-height: 0.96;
   }
 
   .lang-zh .hero h1 {
-    font-size: clamp(52px, 16vw, 74px);
+    font-size: clamp(45px, 12.7vw, 64px);
+  }
+
+  .hero-tagline {
+    margin-top: 23px;
+    font-size: 18px;
   }
 
   .hero-intro {
@@ -1876,6 +1977,27 @@ footer a:hover {
     margin: 0 10px;
   }
 
+  .faq-section {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .faq-list summary {
+    min-height: 96px;
+    grid-template-columns: 28px 1fr 22px;
+    gap: 11px;
+  }
+
+  .faq-list summary strong {
+    font-size: 17px;
+  }
+
+  .faq-list details > p {
+    margin: -2px 22px 0 39px;
+    padding-bottom: 29px;
+    font-size: 14px;
+  }
+
   .closing-section {
     min-height: 790px;
   }
@@ -1909,8 +2031,8 @@ footer a:hover {
     padding: 38px 20px;
   }
 
-  footer > p {
-    text-align: left;
+  .footer-copy {
+    max-width: none;
   }
 
   footer > div:last-child {

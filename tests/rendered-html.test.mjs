@@ -58,7 +58,7 @@ test("server-renders a complete download page without client JavaScript", async 
   }
 });
 
-test("publishes self-referencing metadata and the sitemap entry", async () => {
+test("publishes download metadata and the Open Science guide sitemap entry", async () => {
   const pageResponse = await render("/open-science/download");
   const pageHtml = await pageResponse.text();
   assert.match(
@@ -77,6 +77,25 @@ test("publishes self-referencing metadata and the sitemap entry", async () => {
   const sitemapXml = await sitemapResponse.text();
   assert.match(
     sitemapXml,
-    /<loc>https:\/\/aipoch\.com\/open-science\/download<\/loc>/,
+    /<loc>https:\/\/openscience\.tools\/<\/loc>/,
   );
+});
+
+test("publishes distinct metadata and structured data for the Open Science guide", async () => {
+  const response = await render("/");
+  assert.equal(response.status, 200);
+  const html = await response.text();
+
+  assert.match(
+    html,
+    /<title>Open Science: Tools and Workflows for Reproducible Research \| AIPOCH<\/title>/,
+  );
+  assert.match(
+    html,
+    /<link rel="canonical" href="https:\/\/openscience\.tools"\/?>/,
+  );
+  assert.match(html, /Open Science for[\s\S]{0,80}Reproducible Research/);
+  assert.match(html, /"@type":"CollectionPage"/);
+  assert.match(html, /"@type":"FAQPage"/);
+  assert.match(html, /Does Open Science guarantee reproducible results\?/);
 });

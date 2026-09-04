@@ -6,19 +6,20 @@ type Lang = "en" | "zh";
 
 const copy = {
   en: {
-    nav: ["Why", "Workbench", "Journey", "Community"],
-    navIds: ["why", "workbench", "journey", "community"],
-    open: "Open the overview",
+    nav: ["Principles", "Workflow", "Tools", "FAQ"],
+    navIds: ["why", "journey", "tools", "faq"],
+    open: "Open the AIPOCH workbench",
     eyebrow: "AIPOCH / OPEN SCIENCE",
-    hero: ["Build Science", "in the Open."],
+    hero: ["Open Science for", "Reproducible Research."],
+    heroTagline: "Build science in the open.",
     intro:
-      "An open-source, model-agnostic workbench for real research. Bring the question, the evidence and the expertise into one continuous, inspectable workspace.",
-    explore: "Explore the workbench",
-    download: "Download Open Science",
-    github: "Build with us on GitHub",
+      "Open Science by AIPOCH is an open-source, local-first, model-agnostic research workbench. Keep questions, evidence, methods, execution and artifacts connected in one inspectable workspace.",
+    explore: "Explore the Open Science workflow",
+    download: "Open the AIPOCH workbench",
+    github: "Open the AIPOCH workbench",
     signal: "OPEN BY DESIGN · BUILT WITH THE RESEARCH COMMUNITY",
-    whyKicker: "01 / THE RESEARCH GAP",
-    whyTitle: "A better model won’t fix a broken research workflow.",
+    whyKicker: "01 / THE OPEN SCIENCE GAP",
+    whyTitle: "Why Open Science needs a connected workflow.",
     whyBody:
       "The hard part is keeping evidence, methods, tools, compute and outputs connected. Research should move forward—not reset at every tool boundary.",
     gaps: [
@@ -29,21 +30,23 @@ const copy = {
       ["Validation", "Checks", "Methods and outputs drift apart"],
       ["Outputs", "Artifacts", "Files lose context and provenance"],
     ],
-    workKicker: "02 / ONE RESEARCH WORKBENCH",
-    workTitle: "Start with a question. Get straight to the work.",
+    gapLabel: "OPEN SCIENCE PRIORITIES",
+    gapTerms: "ACCESS · TRANSPARENCY · REPRODUCIBILITY · PROVENANCE",
+    workKicker: "02 / ONE CONNECTED WORKFLOW",
+    workTitle: "Turn Open Science principles into daily practice.",
     workBody:
-      "Open Science is the working environment around the model: your project, specialist methods, tools, execution and research record—kept together from first question to final artifact.",
+      "A connected workbench gives researchers one place to organize the project, choose tools, run the work and review what happened.",
     values: [
       ["Open source", "Code you can inspect"],
       ["Model-agnostic", "Choose what fits"],
-      ["Transparent", "See each step"],
-      ["Reproducible", "Keep context & records"],
+      ["Inspectable", "Review key steps and records"],
+      ["Designed for reproducibility", "Keep context & records"],
     ],
     continuum: ["Ask", "Assemble", "Run", "Review"],
-    journeyKicker: "03 / A RESEARCHER’S JOURNEY",
-    journeyTitle: "One research question. Six connected systems.",
+    journeyKicker: "03 / AN OPEN SCIENCE WORKFLOW",
+    journeyTitle: "One research question. Six traceable steps.",
     journeyBody:
-      "Follow a paper-reproduction task from project setup to a result you can inspect. Every step remains tied to the same question and source material.",
+      "Follow a paper-reproduction task from the first question to a result another researcher can inspect. Each step keeps its sources, decisions and outputs connected.",
     taskLabel: "EXAMPLE TASK",
     task:
       "I have the paper and the data. I want to reproduce the main result.",
@@ -52,7 +55,7 @@ const copy = {
         title: "Set up the project",
         cap: "Persistent context",
         heading: "Define the target before you begin.",
-        body: "Create a project, specify the result to reproduce, and add the paper and data. Every session can use the same context.",
+        body: "Create a project, specify the result to reproduce, and add the paper and data. The workspace is designed to keep that context available across project sessions.",
         result: "A project anchored in the question and source material",
         image: "/assets/product-project.png",
       },
@@ -89,7 +92,7 @@ const copy = {
         image: "/assets/product-artifacts.png",
       },
       {
-        title: "Review & reproduce",
+        title: "Review & rerun",
         cap: "Reviewer & provenance",
         heading: "When the result differs, trace it back.",
         body: "Compare the result with the paper, inspect code, parameters and provenance, then rerun only what needs to change.",
@@ -97,21 +100,21 @@ const copy = {
         image: "/assets/product-reviewer.jpg",
       },
     ],
-    stackKicker: "04 / YOUR RESEARCH, YOUR STACK",
-    stackTitle: "Build the stack around the research.",
+    stackKicker: "04 / OPEN SCIENCE TOOLS",
+    stackTitle: "Choose tools around the research.",
     stackBody:
-      "The research goal stays stable. The technical choices can change with every task.",
+      "Combine agents, models, runtimes, compute and data without losing the research context.",
     stack: [
-      ["01", "Agent", "Codex, Claude Code, OpenCode or another execution framework."],
-      ["02", "Model", "Connect multiple providers, gateways or local models."],
+      ["01", "Agent", "Configure compatible agent frameworks, such as Codex, Claude Code and OpenCode."],
+      ["02", "Model", "Configure compatible model providers, gateways or local models."],
       ["03", "Runtime", "Use persistent Python, R and REPL environments."],
       ["04", "Compute", "Run locally or connect a remote SSH host."],
-      ["05", "Data", "Use project files, research Connectors and MCP servers."],
+      ["05", "Data", "Connect project files and compatible research services using connectors or MCP."],
     ],
     skillKicker: "05 / SPECIALISTS & SKILLS",
     skillTitle: "Load the expertise your research needs.",
     skillBody:
-      "Specialists provide domain context. Skills package methods that can be called, combined, inspected and shared across disciplines.",
+      "Domain-focused skills bring structured methods into the workflow. They can be called, combined, inspected and shared across disciplines.",
     skillTags: [
       "Life science",
       "Medicine",
@@ -123,44 +126,60 @@ const copy = {
       "Data science",
     ],
     skillCta: "Explore scientific capabilities",
+    medicineNote: "Medicine refers to methods and workflows for medical research—not diagnosis, treatment or clinical decision-making.",
     trustKicker: "06 / DATA, ARTIFACTS & TRUST",
-    trustTitle: "Keep every file together. Trace every result back.",
+    trustTitle: "Keep results linked to source material and run records.",
     trustBody:
-      "Source material, execution records and final artifacts stay linked inside the project.",
+      "The workbench is designed to connect source material, execution records and final artifacts inside the project.",
     trust: [
       ["Materials", "Project files, uploads, and @ / # references."],
       ["Artifacts", "Preview datasets, notebooks, figures and reports."],
-      ["Provenance", "Trace output back to code, tools and run records."],
+      ["Provenance", "Review how an output relates to code, tools and run records."],
       ["Control", "Set approvals and permission modes for every session."],
     ],
     communityKicker: "07 / THE OPEN RESEARCH COMMONS",
-    communityTitle: "One workbench. A shared space for open research.",
+    communityTitle: "Open Science is a shared practice.",
     communityBody:
-      "Researchers use capabilities. Domain experts package methods. Developers connect tools and data. Institutions validate, reproduce and collaborate.",
-    roles: ["Researchers", "Domain experts", "Developers", "Institutions"],
+      "Researchers run workflows. Domain experts contribute methods. Developers connect tools and data. Teams share results without losing the evidence behind them.",
+    roles: ["Researchers", "Domain experts", "Developers", "Research teams"],
     loop: ["Use", "Ask", "Review", "Share", "Improve"],
-    closeEyebrow: "AIPOCH / OPEN SCIENCE",
-    closeTitle: "Put research expertise to work. On your terms.",
+    faqKicker: "08 / QUESTIONS",
+    faqTitle: "What Open Science supports—and what it does not claim.",
+    faqs: [
+      {
+        question: "Does Open Science guarantee reproducible results?",
+        answer: "No software can guarantee that a research result will be reproduced. Open Science helps researchers preserve evidence, methods, execution records and artifacts so the work can be inspected, reviewed and rerun.",
+      },
+      {
+        question: "Is Open Science intended for clinical use?",
+        answer: "No. Open Science is designed for research workflows and is not intended for clinical diagnosis, treatment or other medical decisions.",
+      },
+    ],
+    closeEyebrow: "OPEN SCIENCE BY AIPOCH",
+    closeTitle: "Build science in the open.",
     closeBody:
-      "Open research compounds: each reusable capability gives the next project a stronger starting point.",
-    overview: "Product overview",
-    partner: "Partner with AIPOCH",
-    footer: "Open-source research infrastructure by AIPOCH.",
+      "Learn the principles, follow the workflow and open the AIPOCH workbench when you are ready to run real research.",
+    guide: "Open Science guide",
+    overview: "Official product overview",
+    docs: "GitHub & documentation",
+    footer: "Open Science is an open-source research workbench by AIPOCH, designed to support transparent and reproducible research workflows. Research outputs should be independently reviewed. Not intended for clinical diagnosis, treatment or other medical decisions.",
+    trademark: "Third-party product names and trademarks belong to their respective owners. No affiliation or endorsement is implied unless expressly stated.",
   },
   zh: {
-    nav: ["为什么", "工作台", "科研旅程", "开放社区"],
-    navIds: ["why", "workbench", "journey", "community"],
-    open: "查看完整介绍",
+    nav: ["开放原则", "工作流", "工具", "常见问题"],
+    navIds: ["why", "journey", "tools", "faq"],
+    open: "打开 AIPOCH 工作台",
     eyebrow: "AIPOCH / OPEN SCIENCE",
-    hero: ["在开放中", "构建科学。"],
+    hero: ["面向可复现研究的", "Open Science。"],
+    heroTagline: "在开放中构建科学。",
     intro:
-      "面向真实科研的开源、模型自由工作台。让问题、证据与专业知识进入同一个连续、透明、可检查的研究空间。",
-    explore: "探索科研工作台",
-    download: "下载 Open Science",
-    github: "在 GitHub 与我们共建",
+      "AIPOCH Open Science 是一个开源、本地优先、模型自由的科研工作台，让问题、证据、方法、执行与研究资产在同一个可检查的工作空间中保持连接。",
+    explore: "探索 Open Science 工作流",
+    download: "打开 AIPOCH 工作台",
+    github: "打开 AIPOCH 工作台",
     signal: "以开放为原则 · 与全球科研社区共同构建",
-    whyKicker: "01 / 科研断层",
-    whyTitle: "更强的模型，修复不了破碎的科研工作流。",
+    whyKicker: "01 / OPEN SCIENCE 的断层",
+    whyTitle: "为什么 Open Science 需要相互连接的工作流。",
     whyBody:
       "真正困难的，是让证据、方法、工具、算力和产出始终保持连接。科研应该持续向前，而不是在每个工具边界重新开始。",
     gaps: [
@@ -171,21 +190,23 @@ const copy = {
       ["验证", "检查机制", "方法与结果逐渐脱节"],
       ["产出", "研究资产", "文件失去上下文与溯源"],
     ],
-    workKicker: "02 / 一个科研工作台",
-    workTitle: "从一个问题开始，直接进入科研。",
+    gapLabel: "OPEN SCIENCE 的重点",
+    gapTerms: "开放获取 · 过程透明 · 可复现性 · 研究溯源",
+    workKicker: "02 / 一个相互连接的工作流",
+    workTitle: "把 Open Science 原则带进日常科研。",
     workBody:
-      "Open Science 是模型之外的完整工作环境：项目、专业方法、工具、执行与研究记录，从第一个问题到最终成果始终在一起。",
+      "相互连接的工作台，让研究者可以在同一个地方组织项目、选择工具、执行工作，并检查发生过什么。",
     values: [
       ["开源", "代码可检查"],
       ["模型自由", "选择适合研究的方案"],
-      ["过程透明", "看见每一步"],
-      ["可复现", "保留上下文与记录"],
+      ["可检查", "审阅关键步骤与记录"],
+      ["为可复现性设计", "保留上下文与记录"],
     ],
     continuum: ["提问", "组装", "执行", "审阅"],
-    journeyKicker: "03 / 研究者旅程",
-    journeyTitle: "一个科研问题，六个相互连接的系统。",
+    journeyKicker: "03 / OPEN SCIENCE 工作流",
+    journeyTitle: "一个科研问题，六个可追溯步骤。",
     journeyBody:
-      "沿着一项论文复现任务，从项目设置走到可以检查的结果。每一步都与同一个问题和源材料相连。",
+      "沿着一项论文复现任务，从第一个问题走到另一位研究者可以检查的结果。每一步都保留对应的来源、决策与产出。",
     taskLabel: "示例任务",
     task: "我有论文和数据，希望复现其中的核心结果。",
     steps: [
@@ -193,7 +214,7 @@ const copy = {
         title: "建立项目",
         cap: "持久上下文",
         heading: "开始之前，先定义目标。",
-        body: "创建项目、说明需要复现的结果，并加入论文和数据。之后的每个会话都能使用同一上下文。",
+        body: "创建项目、说明需要复现的结果，并加入论文和数据。工作台的设计目标，是让这些上下文可以在项目会话间继续使用。",
         result: "一个以问题和源材料为锚点的研究项目",
         image: "/assets/product-project.png",
       },
@@ -230,7 +251,7 @@ const copy = {
         image: "/assets/product-artifacts.png",
       },
       {
-        title: "审阅与复现",
+        title: "审阅与重跑",
         cap: "Reviewer 与溯源",
         heading: "当结果不一致时，追溯它。",
         body: "将结果与论文对照，检查代码、参数与来源记录，只重新运行需要改变的部分。",
@@ -238,20 +259,20 @@ const copy = {
         image: "/assets/product-reviewer.jpg",
       },
     ],
-    stackKicker: "04 / 你的研究，你的技术栈",
-    stackTitle: "让技术栈围绕研究来构建。",
-    stackBody: "研究目标保持稳定，技术选择可以随每一项任务改变。",
+    stackKicker: "04 / OPEN SCIENCE 工具",
+    stackTitle: "围绕研究选择工具。",
+    stackBody: "组合 Agent、模型、运行时、算力与数据，同时保留研究上下文。",
     stack: [
-      ["01", "Agent", "使用 Codex、Claude Code、OpenCode 或其他执行框架。"],
-      ["02", "模型", "连接多个模型提供商、网关或本地模型。"],
+      ["01", "Agent", "配置兼容的 Agent 框架，例如 Codex、Claude Code 与 OpenCode。"],
+      ["02", "模型", "配置兼容的模型提供商、网关或本地模型。"],
       ["03", "运行时", "使用持久化的 Python、R 和 REPL 环境。"],
       ["04", "算力", "在本地运行，或连接远程 SSH 主机。"],
-      ["05", "数据", "使用项目文件、科研 Connectors 与 MCP 服务。"],
+      ["05", "数据", "通过 Connector 或 MCP 连接项目文件与兼容的科研服务。"],
     ],
     skillKicker: "05 / 专家与 SKILLS",
     skillTitle: "载入你的研究真正需要的专业能力。",
     skillBody:
-      "Specialists 提供领域上下文，Skills 将科研方法封装为可调用、可组合、可检查、可共享的能力。",
+      "面向具体领域的 Skills 将结构化方法带入工作流，并支持跨学科调用、组合、检查与分享。",
     skillTags: [
       "生命科学",
       "医学",
@@ -263,28 +284,43 @@ const copy = {
       "数据科学",
     ],
     skillCta: "探索科学能力",
+    medicineNote: "Medicine 指用于医学研究的方法与工作流，不用于诊断、治疗或其他临床决策。",
     trustKicker: "06 / 数据、资产与信任",
-    trustTitle: "把每个文件放在一起，让每个结果都能追溯。",
-    trustBody: "源材料、执行记录与最终资产始终在项目中保持连接。",
+    trustTitle: "让研究结果与源材料和运行记录保持连接。",
+    trustBody: "工作台的设计目标，是在项目中连接源材料、执行记录与最终研究资产。",
     trust: [
       ["材料", "项目文件、上传内容，以及 @ / # 引用。"],
       ["研究资产", "预览数据集、Notebook、图表和报告。"],
-      ["溯源", "从产出回到代码、工具调用与运行记录。"],
+      ["溯源", "检查产出与代码、工具调用和运行记录的关系。"],
       ["控制", "为每个会话设置批准流程与权限模式。"],
     ],
     communityKicker: "07 / 开放科研共同体",
-    communityTitle: "一个工作台，一片开放科研的共享空间。",
+    communityTitle: "Open Science 是一种共同实践。",
     communityBody:
-      "研究者使用能力，领域专家封装方法，开发者连接工具与数据，科研机构参与验证、复现和协作。",
-    roles: ["研究者", "领域专家", "开发者", "科研机构"],
+      "研究者运行工作流，领域专家贡献方法，开发者连接工具与数据，研究团队在不丢失证据脉络的前提下分享结果。",
+    roles: ["研究者", "领域专家", "开发者", "研究团队"],
     loop: ["使用", "提问", "审阅", "分享", "改进"],
-    closeEyebrow: "AIPOCH / OPEN SCIENCE",
-    closeTitle: "让科研专业能力真正工作起来。按你的方式。",
+    faqKicker: "08 / 常见问题",
+    faqTitle: "Open Science 支持什么，以及不承诺什么。",
+    faqs: [
+      {
+        question: "Open Science 能保证研究结果被成功复现吗？",
+        answer: "不能。任何软件都无法保证一项研究结果一定能被复现。Open Science 帮助研究者保留证据、方法、执行记录与研究资产，使研究工作更便于检查、审阅与重新运行。",
+      },
+      {
+        question: "Open Science 可以用于临床用途吗？",
+        answer: "不可以。Open Science 面向科研工作流，不用于临床诊断、治疗或其他医学决策。",
+      },
+    ],
+    closeEyebrow: "OPEN SCIENCE BY AIPOCH",
+    closeTitle: "在开放中构建科学。",
     closeBody:
-      "开放科研会产生复利：每一项可复用的能力，都让下一个项目拥有更强的起点。",
-    overview: "查看产品介绍",
-    partner: "与 AIPOCH 合作",
-    footer: "AIPOCH 构建的开源科研基础设施。",
+      "了解开放原则，沿着工作流实践；当你准备运行真实科研任务时，打开 AIPOCH 工作台。",
+    guide: "Open Science 指南",
+    overview: "官方产品介绍",
+    docs: "GitHub 与文档",
+    footer: "Open Science 是 AIPOCH 推出的开源科研工作台，旨在支持透明、可复现的科研工作流。研究产出应由专业人员独立审阅，不用于临床诊断、治疗或其他医学决策。",
+    trademark: "第三方产品名称和商标归其各自权利人所有。除非另有明确说明，不代表存在关联、合作或背书。",
   },
 } as const;
 
@@ -337,7 +373,7 @@ export default function Home() {
               中文
             </button>
           </div>
-          <a className="header-cta" href="https://aipoch.com/open-science/overview?lang=en" target="_blank" rel="noreferrer">
+          <a className="header-cta" href="https://aipoch.com/open-science" target="_blank" rel="noreferrer">
             {c.open} <span aria-hidden="true">↗</span>
           </a>
           <button className="menu-button" onClick={() => setMenuOpen((value) => !value)} aria-expanded={menuOpen} aria-label="Toggle navigation">
@@ -355,10 +391,11 @@ export default function Home() {
             <span>{c.hero[0]}</span>
             <span className="highlight-line">{c.hero[1]}</span>
           </h1>
+          <p className="hero-tagline">{c.heroTagline}</p>
           <p className="hero-intro">{c.intro}</p>
           <div className="hero-actions">
             <a className="button primary" href="#workbench">{c.explore} <span aria-hidden="true">↓</span></a>
-            <a className="text-link" href="https://aipoch.com/open-science/download">{c.download} <span aria-hidden="true">↗</span></a>
+            <a className="text-link" href="https://aipoch.com/open-science" target="_blank" rel="noreferrer">{c.download} <span aria-hidden="true">↗</span></a>
           </div>
         </div>
         <div className="hero-art reveal-in" aria-hidden="true">
@@ -389,9 +426,9 @@ export default function Home() {
           ))}
         </div>
         <div className="lost-line">
-          <span>WHAT GETS LOST</span>
+          <span>{c.gapLabel}</span>
           <div />
-          <strong>CONTEXT · CONTINUITY · EXECUTION STATE · PROVENANCE</strong>
+          <strong>{c.gapTerms}</strong>
         </div>
       </section>
 
@@ -468,7 +505,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section stack-section">
+      <section className="section stack-section" id="tools">
         <div className="stack-lead">
           <p className="kicker">{c.stackKicker}</p>
           <h2>{c.stackTitle}</h2>
@@ -498,7 +535,8 @@ export default function Home() {
           <div className="skill-tags">
             {c.skillTags.map((tag, index) => <span key={tag}><i>{String(index + 1).padStart(2, "0")}</i>{tag}</span>)}
           </div>
-          <a className="button yellow" href="https://aipoch.com/open-science/overview?lang=en#slide-09" target="_blank" rel="noreferrer">{c.skillCta} <span>↗</span></a>
+          <p className="medicine-note">{c.medicineNote}</p>
+          <a className="button yellow" href="https://aipoch.com/open-science" target="_blank" rel="noreferrer">{c.skillCta} <span>↗</span></a>
         </div>
         <div className="skills-visual">
           <div className="yellow-orbit" aria-hidden="true" />
@@ -553,22 +591,40 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="section faq-section" id="faq">
+        <div className="faq-heading">
+          <p className="kicker">{c.faqKicker}</p>
+          <h2>{c.faqTitle}</h2>
+        </div>
+        <div className="faq-list">
+          {c.faqs.map((faq, index) => (
+            <details key={faq.question} open={index === 0}>
+              <summary>
+                <span>{String(index + 1).padStart(2, "0")}</span>
+                <strong>{faq.question}</strong>
+                <i aria-hidden="true">+</i>
+              </summary>
+              <p>{faq.answer}</p>
+            </details>
+          ))}
+        </div>
+      </section>
+
       <section className="closing-section">
         <div className="closing-grid" aria-hidden="true" />
         <p className="eyebrow">{c.closeEyebrow}</p>
-        <h2>Build Science<br/><span>in the Open.</span></h2>
-        <p className="closing-localized">{c.closeTitle}</p>
+        <h2>{c.closeTitle}</h2>
         <p className="closing-body">{c.closeBody}</p>
         <div className="closing-actions">
-          <a href="https://aipoch.com/open-science/overview?lang=en" target="_blank" rel="noreferrer"><span>01</span>{c.overview}<i>↗</i></a>
-          <a href="https://github.com/aipoch/open-science" target="_blank" rel="noreferrer"><span>02</span>GitHub<i>↗</i></a>
-          <a href="https://aipoch.com/contact-us" target="_blank" rel="noreferrer"><span>03</span>{c.partner}<i>↗</i></a>
+          <a href="#why"><span>01</span>{c.guide}<i>↓</i></a>
+          <a href="https://aipoch.com/open-science" target="_blank" rel="noreferrer"><span>02</span>{c.overview}<i>↗</i></a>
+          <a href="https://github.com/aipoch/open-science" target="_blank" rel="noreferrer"><span>03</span>{c.docs}<i>↗</i></a>
         </div>
       </section>
 
       <footer>
         <div className="brand footer-brand"><img src="/assets/aipoch-mark.png" alt="AIPOCH" /><span className="brand-divider"/><span>OPEN SCIENCE</span></div>
-        <p>{c.footer}</p>
+        <div className="footer-copy"><p>{c.footer}</p><p>{c.trademark}</p></div>
         <div><span>© 2026 AIPOCH</span><a href="#top">BACK TO TOP ↑</a></div>
       </footer>
     </main>
