@@ -77,7 +77,7 @@ test("publishes download metadata and the Open Science guide sitemap entry", asy
   const sitemapXml = await sitemapResponse.text();
   assert.match(
     sitemapXml,
-    /<loc>https:\/\/openscience\.tools\/<\/loc>/,
+    /<loc>https:\/\/open-science\.app\/<\/loc>/,
   );
 });
 
@@ -92,7 +92,7 @@ test("publishes distinct metadata and structured data for the Open Science guide
   );
   assert.match(
     html,
-    /<link rel="canonical" href="https:\/\/openscience\.tools"\/?>/,
+    /<link rel="canonical" href="https:\/\/open-science\.app"\/?>/,
   );
   assert.match(html, /Open Science for[\s\S]{0,80}Reproducible Research/);
   assert.match(html, /"@type":"CollectionPage"/);

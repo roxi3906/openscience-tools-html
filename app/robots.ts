@@ -6,7 +6,7 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://openscience.tools/sitemap.xml",
-    host: "https://openscience.tools",
+    sitemap: "https://open-science.app/sitemap.xml",
+    host: "https://open-science.app",
   };
 }

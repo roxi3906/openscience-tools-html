@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     title: "AIPOCH Open Science — One Traceable Research Workspace",
     description:
       "Plan, execute, inspect and reproduce scientific work in one open workspace.",
-    url: "https://openscience.tools/v2",
+    url: "https://open-science.app/v2",
     images: [
       {
         url: "/og-v2.png",

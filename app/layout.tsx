@@ -13,12 +13,12 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://openscience.tools"),
+  metadataBase: new URL("https://open-science.app"),
   title: "Open Science: Tools and Workflows for Reproducible Research | AIPOCH",
   description:
     "Learn how Open Science connects methods, data, code and results—and explore practical tools and workflows for research that others can inspect, reproduce and build on.",
   alternates: {
-    canonical: "https://openscience.tools/",
+    canonical: "https://open-science.app/",
   },
   robots: {
     index: true,
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     title: "Open Science: Tools and Workflows for Reproducible Research | AIPOCH",
     description:
       "Learn how Open Science connects methods, data, code and results—and explore practical tools and workflows for research that others can inspect, reproduce and build on.",
-    url: "https://openscience.tools/",
+    url: "https://open-science.app/",
     siteName: "Open Science by AIPOCH",
     type: "website",
     images: [{ url: "/og.png", width: 1792, height: 1024, alt: "AIPOCH Open Science — Build Science in the Open" }],
@@ -50,8 +50,8 @@ const structuredData = {
   "@graph": [
     {
       "@type": "WebSite",
-      "@id": "https://openscience.tools/#website",
-      url: "https://openscience.tools/",
+      "@id": "https://open-science.app/#website",
+      url: "https://open-science.app/",
       name: "Open Science by AIPOCH",
       publisher: {
         "@type": "Organization",
@@ -61,12 +61,12 @@ const structuredData = {
     },
     {
       "@type": "CollectionPage",
-      "@id": "https://openscience.tools/#guide",
-      url: "https://openscience.tools/",
+      "@id": "https://open-science.app/#guide",
+      url: "https://open-science.app/",
       name: "Open Science Tools and Workflows for Reproducible Research",
       description:
         "A practical guide to connected Open Science principles, tools and workflows by AIPOCH.",
-      isPartOf: { "@id": "https://openscience.tools/#website" },
+      isPartOf: { "@id": "https://open-science.app/#website" },
       about: [
         { "@type": "Thing", name: "Open Science" },
         { "@type": "Thing", name: "Reproducible research" },
@@ -75,7 +75,7 @@ const structuredData = {
     },
     {
       "@type": "FAQPage",
-      "@id": "https://openscience.tools/#faq",
+      "@id": "https://open-science.app/#faq",
       mainEntity: [
         {
           "@type": "Question",
@@ -110,7 +110,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <script
           id="aipoch-google-analytics"
           dangerouslySetInnerHTML={{
-            __html: `if (location.hostname === 'aipoch.com' || location.hostname === 'www.aipoch.com') {
+            __html: `if (location.hostname === 'open-science.app' || location.hostname === 'www.open-science.app' || location.hostname === 'aipoch.com' || location.hostname === 'www.aipoch.com') {
   window.dataLayer = window.dataLayer || [];
   window.gtag = function(){window.dataLayer.push(arguments);};
   window.gtag('js', new Date());
