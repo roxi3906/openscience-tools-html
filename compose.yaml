@@ -2,6 +2,7 @@ services:
   web:
     build:
       context: .
+    # image: ghcr.io/aipoch/openscience-tools-html:latest
     ports:
       - "${HOST_PORT:-3000}:3000"
     environment:
