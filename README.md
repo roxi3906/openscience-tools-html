@@ -3,7 +3,6 @@
 Source code for the AIPOCH Open Science website.
 
 - Production domain: <https://open-science.app>
-- Current hosted preview: <https://aipoch-open-science.theresayao0614.chatgpt.site>
 - Product overview: <https://aipoch.com/open-science/overview?lang=en>
 
 ## Local development
