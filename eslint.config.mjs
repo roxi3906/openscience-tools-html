@@ -10,12 +10,7 @@ import tseslint from "typescript-eslint";
 const eslintConfig = defineConfig([
   globalIgnores([
     ".next/**",
-    "dist/**",
     "out/**",
-    "build/**",
-    "html-export/**",
-    "html-export-v2/**",
-    "output/**",
     "next-env.d.ts",
   ]),
   eslint.configs.recommended,
@@ -30,7 +25,6 @@ const eslintConfig = defineConfig([
       globals: {
         ...globals.browser,
         ...globals.node,
-        ...globals.serviceworker,
       },
     },
     settings: {
