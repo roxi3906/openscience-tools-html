@@ -50,6 +50,36 @@ docker run --rm -p 3000:3000 \
 The token is not required because the download page includes built-in fallback
 release data. It is never copied into the image.
 
+### GitHub Container Registry
+
+The [Publish container image](.github/workflows/publish-container.yml) workflow
+follows the [Open Science wiki publishing workflow](https://github.com/aipoch/openscience-wiki/blob/main/.github/workflows/publish-container.yml).
+Every push to `main` builds the existing Dockerfile for `linux/amd64` and
+publishes to `ghcr.io/<owner>/openscience-tools-html` with these tags:
+
+- `sha-<full-commit-sha>` identifies the image built from a specific commit.
+- `latest` is promoted from the current `main` image after a successful build.
+  Promotions run serially and check the current branch head so an older build
+  cannot overwrite `latest` with an outdated image. If the current head image
+  is not available yet, promotion is skipped until a later successful run.
+
+The workflow can also be run manually on `main` from the Actions tab. Manual
+runs on other branches are skipped. It uses the built-in `GITHUB_TOKEN` with
+`contents: read` and `packages: write`; no additional registry secret is required.
+
+Pull and run the published image, replacing `<owner>` with the repository
+owner (`aipoch` for the upstream repository, or your username for a fork):
+
+```bash
+docker pull ghcr.io/<owner>/openscience-tools-html:latest
+docker run --rm -p 3000:3000 ghcr.io/<owner>/openscience-tools-html:latest
+```
+
+For reproducible deployments, use `sha-<full-commit-sha>` instead of `latest`.
+To allow unauthenticated pulls, set the GHCR package visibility to public
+after its first publication. Private packages require an authenticated
+`docker login ghcr.io` before pulling.
+
 ## Docker Compose
 
 Start the production service, inspect it, and stop it with:
